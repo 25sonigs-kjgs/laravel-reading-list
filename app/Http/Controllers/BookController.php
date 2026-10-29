@@ -28,6 +28,7 @@ class BookController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
+            'notes' => 'nullable|string',
             'title' => 'required|string|max:255',
             'author' => 'required|string|max:255',
             'genre' => 'required|string|max:100',
@@ -49,6 +50,7 @@ class BookController extends Controller
     public function update(Request $request, Book $book)
     {
         $validated = $request->validate([
+            'notes' => 'nullable|string',
             'title' => 'required|string|max:255',
             'author' => 'required|string|max:255',
             'genre' => 'required|string|max:100',

@@ -46,6 +46,15 @@
     <option value="finished" {{ old('status') == 'finished' ? 'selected' : '' }}>Finished</option>
 </select>
 
+<div>
+    <label for="notes">Notes</label>
+    <textarea
+        id="notes"
+        name="notes"
+        placeholder="Write a few notes about this book..."
+    >{{ old('notes') }}</textarea>
+</div>
+
         <button type="submit">Save Book</button>
 
         <a href="{{ route('books.index') }}" class="btn">
