@@ -5,6 +5,12 @@
 </head>
 <body>
     <h1>My Reading List</h1>
+    <p>
+    <a href="{{ route('books.index') }}">All</a> |
+    <a href="{{ route('books.index', ['status' => 'to-read']) }}">To read</a> |
+    <a href="{{ route('books.index', ['status' => 'reading']) }}">Reading</a> |
+    <a href="{{ route('books.index', ['status' => 'finished']) }}">Finished</a>
+</p>
     <a href="{{ route('books.create') }}">Add Book</a>
 
     @if ($books->isEmpty())
