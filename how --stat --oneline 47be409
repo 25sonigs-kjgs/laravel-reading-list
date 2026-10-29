@@ -1,0 +1,96 @@
+[33me67498b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/backup-before-reorganizing[m[33m, [m[1;32mbackup-before-reorganizing[m[33m)[m Add helpful placeholders to edit form
+ resources/views/books/edit.blade.php | 26 [32m++++++++++++++++++[m[31m--------[m
+ 1 file changed, 18 insertions(+), 8 deletions(-)
+[33m83f2200[m Add notes placeholder to book form
+ app/Http/Controllers/BookController.php            |  2 [32m++[m
+ app/Models/Book.php                                | 11 [32m+++++[m[31m----[m
+ .../2026_10_29_203814_add_notes_to_books_table.php | 28 [32m++++++++++++++++++++++[m
+ resources/views/books/create.blade.php             |  9 [32m+++++++[m
+ 4 files changed, 45 insertions(+), 5 deletions(-)
+[33md5b91c3[m Add helpful placeholders to book form
+ resources/views/books/create.blade.php | 34 [32m++++++++++++++++++++[m[31m--------------[m
+ 1 file changed, 20 insertions(+), 14 deletions(-)
+[33mb4247b0[m Improve empty book list messages
+ resources/views/books/index.blade.php | 10 [32m+++++++[m[31m---[m
+ 1 file changed, 7 insertions(+), 3 deletions(-)
+[33m27405bb[m Preserve selected status on book form
+ resources/views/books/create.blade.php | 16 [32m+++++[m[31m-----------[m
+ 1 file changed, 5 insertions(+), 11 deletions(-)
+[33m1abf7ef[m Write README with setup steps and AI usage
+ README.md | 21 [32m+++++++++++++++++++++[m
+ 1 file changed, 21 insertions(+)
+[33m47be409[m Complete Laravel reading List features
+ app/Http/Controllers/BookController.php            | 72 [32m+++++++++++++++++[m
+ app/Models/Book.php                                |  9 [32m++[m[31m-[m
+ .../2026_10_29_180801_add_genre_to_books_table.php | 22 [32m++++++[m
+ resources/views/books/create.blade.php             | 56 [32m+++++++++++++[m
+ resources/views/books/edit.blade.php               | 58 [32m++++++++++++++[m
+ resources/views/books/index.blade.php              | 74 [32m++++++++++++++++++[m
+ resources/views/books/layout.blade.php             | 91 [32m++++++++++++++++++++++[m
+ routes/web.php                                     | 21 [32m++++[m[31m-[m
+ 8 files changed, 398 insertions(+), 5 deletions(-)
+[33m16bd632[m Add books table and book model
+ .editorconfig                                      |    18 [32m+[m
+ .env.example                                       |    65 [32m+[m
+ .gitattributes                                     |    11 [32m+[m
+ .gitignore                                         |    27 [32m+[m
+ .npmrc                                             |     2 [32m+[m
+ AGENTS.md                                          |    47 [32m+[m
+ CLAUDE.md                                          |    47 [32m+[m
+ README.md                                          |    58 [32m+[m
+ app/Http/Controllers/Controller.php                |     8 [32m+[m
+ app/Models/Book.php                                |    10 [32m+[m
+ app/Models/User.php                                |    32 [32m+[m
+ app/Providers/AppServiceProvider.php               |    24 [32m+[m
+ artisan                                            |    18 [32m+[m
+ bootstrap/app.php                                  |    21 [32m+[m
+ bootstrap/cache/.gitignore                         |     2 [32m+[m
+ bootstrap/providers.php                            |     7 [32m+[m
+ composer.json                                      |    91 [32m+[m
+ composer.lock                                      | 10254 [32m+++++++++++++++++++[m
+ config/app.php                                     |   126 [32m+[m
+ config/auth.php                                    |   117 [32m+[m
+ config/cache.php                                   |   136 [32m+[m
+ config/database.php                                |   184 [32m+[m
+ config/filesystems.php                             |    80 [32m+[m
+ config/logging.php                                 |   140 [32m+[m
+ config/mail.php                                    |   118 [32m+[m
+ config/queue.php                                   |   129 [32m+[m
+ config/services.php                                |    38 [32m+[m
+ config/session.php                                 |   233 [32m+[m
+ database/.gitignore                                |     1 [32m+[m
+ database/factories/UserFactory.php                 |    45 [32m+[m
+ .../0001_01_01_000000_create_users_table.php       |    49 [32m+[m
+ .../0001_01_01_000001_create_cache_table.php       |    35 [32m+[m
+ .../0001_01_01_000002_create_jobs_table.php        |    59 [32m+[m
+ .../2026_10_29_172829_create_books_table.php       |    30 [32m+[m
+ database/seeders/DatabaseSeeder.php                |    25 [32m+[m
+ package-lock.json                                  |  2368 [32m+++++[m
+ package.json                                       |    19 [32m+[m
+ phpunit.xml                                        |    36 [32m+[m
+ public/.htaccess                                   |    25 [32m+[m
+ public/favicon.ico                                 |     0
+ public/index.php                                   |    20 [32m+[m
+ public/robots.txt                                  |     2 [32m+[m
+ resources/css/app.css                              |     9 [32m+[m
+ resources/js/app.js                                |     1 [32m+[m
+ resources/views/welcome.blade.php                  |   223 [32m+[m
+ routes/console.php                                 |     8 [32m+[m
+ routes/web.php                                     |     7 [32m+[m
+ storage/app/.gitignore                             |     4 [32m+[m
+ storage/app/private/.gitignore                     |     2 [32m+[m
+ storage/app/public/.gitignore                      |     2 [32m+[m
+ storage/framework/.gitignore                       |    10 [32m+[m
+ storage/framework/cache/.gitignore                 |     4 [32m+[m
+ storage/framework/cache/data/.gitignore            |     2 [32m+[m
+ storage/framework/cache/locks/.gitignore           |     2 [32m+[m
+ storage/framework/sessions/.gitignore              |     2 [32m+[m
+ storage/framework/testing/.gitignore               |     2 [32m+[m
+ storage/framework/views/.gitignore                 |     2 [32m+[m
+ storage/logs/.gitignore                            |     2 [32m+[m
+ tests/Feature/ExampleTest.php                      |     7 [32m+[m
+ tests/Pest.php                                     |    50 [32m+[m
+ tests/TestCase.php                                 |    10 [32m+[m
+ tests/Unit/ExampleTest.php                         |     5 [32m+[m
+ vite.config.js                                     |    24 [32m+[m
+ 63 files changed, 15135 insertions(+)
