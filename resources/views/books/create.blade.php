@@ -18,20 +18,26 @@
     <form action="{{ route('books.store') }}" method="POST">
         @csrf
 
-        <label>Book Title:</label>
-        <input type="text" name="title"
-               value="{{ old('title') }}"
-               placeholder="Enter book title" required>
+        <input
+    type="text"
+    name="title"
+    placeholder="e.g. The Great Gatsby"
+    value="{{ old('title') }}"
+>
 
-        <label>Author:</label>
-        <input type="text" name="author"
-               value="{{ old('author') }}"
-               placeholder="Enter author name" required>
+<input
+    type="text"
+    name="author"
+    placeholder="e.g. F. Scott Fitzgerald"
+    value="{{ old('author') }}"
+>
 
-        <label>Genre:</label>
-        <input type="text" name="genre"
-               value="{{ old('genre') }}"
-               placeholder="e.g. Fiction, Romance, Science" required>
+<input
+    type="text"
+    name="genre"
+    placeholder="e.g. Fiction, Mystery, Romance"
+    value="{{ old('genre') }}"
+>
 
         <label>Reading Status:</label>
        <select name="status">
