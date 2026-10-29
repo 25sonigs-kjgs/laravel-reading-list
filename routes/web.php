@@ -20,3 +20,8 @@ Route::put('/books/{book}', [BookController::class, 'update'])
 
 Route::delete('/books/{book}', [BookController::class, 'destroy'])
     ->name('books.destroy');
+Route::get('/', function () {
+    return redirect('/books');
+});
+
+Route::resource('books', BookController::class);
