@@ -58,10 +58,9 @@ public function update(Request $request, Book $book)
 
     // Delete a book
     public function destroy(Book $book)
-    {
-        $book->delete();
+{
+    $book->delete();
 
-        return redirect()->route('books.index')
-            ->with('success', 'Book deleted successfully!');
-    }
+    return redirect()->route('books.index');
+}
 }
