@@ -56,3 +56,24 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+# Laravel Reading List
+
+A Laravel application for managing books and tracking reading progress.
+
+## Features
+- Add books with title, author, genre, and reading status
+- View, edit, and delete books
+- Filter books by reading status
+
+## Setup Instructions
+1. Install PHP, Composer, and the required database.
+2. Run `composer install`.
+3. Copy `.env.example` to `.env`.
+4. Configure your database settings in `.env`.
+5. Run `php artisan key:generate`.
+6. Run `php artisan migrate`.
+7. Start the application with `php artisan serve`.
+
+## AI Usage
+AI tools were used for assistance with development, troubleshooting, and understanding Laravel concepts. Review and adapt this section to accurately describe your own use of AI.
