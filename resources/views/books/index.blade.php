@@ -67,8 +67,12 @@
                 </form>
             </div>
         </div>
-    @empty
-        <p>No books found. Click "Add New Book" to get started!</p>
-    @endforelse
+   @empty
+    <div class="empty-state">
+        <h3>📚 Your reading list is empty!</h3>
+        <p>Add your first book to start tracking your reading journey.</p>
+        <a href="{{ route('books.create') }}">+ Add Your First Book</a>
+    </div>
+@endforelse
 
 @endsection
