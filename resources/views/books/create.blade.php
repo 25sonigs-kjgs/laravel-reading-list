@@ -34,17 +34,11 @@
                placeholder="e.g. Fiction, Romance, Science" required>
 
         <label>Reading Status:</label>
-        <select name="status" required>
-            <option value="to-read" @selected(old('status', 'to-read') === 'to-read')>
-                To Read
-            </option>
-            <option value="reading" @selected(old('status') === 'reading')>
-                Reading
-            </option>
-            <option value="finished" @selected(old('status') === 'finished')>
-                Finished
-            </option>
-        </select>
+       <select name="status">
+    <option value="to-read" {{ old('status', 'to-read') == 'to-read' ? 'selected' : '' }}>To Read</option>
+    <option value="reading" {{ old('status') == 'reading' ? 'selected' : '' }}>Reading</option>
+    <option value="finished" {{ old('status') == 'finished' ? 'selected' : '' }}>Finished</option>
+</select>
 
         <button type="submit">Save Book</button>
 
