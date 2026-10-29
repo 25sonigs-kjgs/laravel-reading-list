@@ -39,26 +39,22 @@ public function store(Request $request)
     }
 
     public function edit(Book $book)
-    {
-        return view('books.edit', compact('book'));
-    }
+{
+    return view('books.edit', compact('book'));
+}
 
-    // Update book details
-    public function update(Request $request, Book $book)
-    {
-        $validated = $request->validate([
-            'notes' => 'nullable|string',
-            'title' => 'required|string|max:255',
-            'author' => 'required|string|max:255',
-            'genre' => 'required|string|max:100',
-            'status' => 'required|in:to-read,reading,finished',
-        ]);
+public function update(Request $request, Book $book)
+{
+    $validated = $request->validate([
+        'title' => 'required|string|max:255',
+        'author' => 'required|string|max:255',
+        'status' => 'required|in:to-read,reading,finished',
+    ]);
 
-        $book->update($validated);
+    $book->update($validated);
 
-        return redirect()->route('books.index')
-            ->with('success', 'Book updated successfully!');
-    }
+    return redirect()->route('books.index');
+}
 
     // Delete a book
     public function destroy(Book $book)
