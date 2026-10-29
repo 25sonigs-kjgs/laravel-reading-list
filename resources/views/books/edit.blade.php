@@ -19,16 +19,26 @@
         @method('PUT')
 
         <label>Book Title:</label>
-        <input type="text" name="title"
-               value="{{ old('title', $book->title) }}" required>
+        <input
+    type="text"
+    name="title"
+    value="{{ old('title', $book->title) }}"
+    placeholder="e.g. The Great Gatsby"
+>
 
-        <label>Author:</label>
-        <input type="text" name="author"
-               value="{{ old('author', $book->author) }}" required>
+<input
+    type="text"
+    name="author"
+    value="{{ old('author', $book->author) }}"
+    placeholder="e.g. F. Scott Fitzgerald"
+>
 
-        <label>Genre:</label>
-        <input type="text" name="genre"
-               value="{{ old('genre', $book->genre) }}" required>
+<input
+    type="text"
+    name="genre"
+    value="{{ old('genre', $book->genre) }}"
+    placeholder="e.g. Fiction, Mystery, Romance"
+>
 
         <label>Reading Status:</label>
         <select name="status" required>
